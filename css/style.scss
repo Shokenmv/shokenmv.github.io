@@ -1,0 +1,184 @@
+$darc: #606062;
+$light: #DCDDDF;
+$turc: #51A8B1;
+$lightturc: #B5D6D6;
+
+body {
+  font: {
+    family: 'Montserrat', sans-serif;
+    size: 16px;
+  }
+  line-height: 1.6;
+  background: {
+    color: $light;
+  }
+  margin:0; 
+  padding:0; 
+}
+
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: $turc;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-top: 0px;
+  &.career {
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+}
+
+.sheet {
+  -webkit-box-shadow: 1px 1px 15px 0px rgba(96,96,98,1);
+  -moz-box-shadow: 1px 1px 15px 0px rgba(96,96,98,1);
+  box-shadow: 1px 1px 15px 0px rgba(96,96,98,1);
+  width: 960px;
+  margin:  50px auto;
+  color: $darc;
+  background: {
+    color: white;
+  }
+}
+
+.header, .footer {
+  background: {
+    color: $lightturc;
+  }
+  padding: {
+    top: 50px;
+    right: 50px;
+    bottom: 50px;
+    left: 100px;
+  }
+}
+
+.avatar > img {
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid $darc; */
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 11px 0px rgba(96,96,98,1);
+  -moz-box-shadow: 0px 0px 11px 0px rgba(96,96,98,1);
+  box-shadow: 0px 0px 11px 0px rgba(96,96,98,1);
+}
+
+.name {
+  margin: 0;
+  align-self: center;
+}
+
+.main {
+  padding: {
+    top: 50px;
+    right: 50px;
+    bottom: 50px;
+    left: 100px;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 380px 380px;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+}
+
+.sub-grid, .footer, .header {
+  display: grid;
+  grid-template-columns: 380px 380px;
+  grid-column-gap: 50px;
+  h3 {
+    grid-column: 1 / 3;
+  }
+}
+
+.sub-grid {
+  grid-column: 1 / 3;
+}
+
+/*
+.block {
+  background: {
+    color: lightpink;
+  };
+}
+*/
+
+/*
+.career {
+  grid-column: 1 / 3;
+}
+*/
+
+ul {
+  padding-left: 15px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+
+a {
+  text-decoration: none;
+  color: $turc;
+}
+
+@media screen and (max-device-width: 480px) {
+  .sheet {
+    width: auto;
+    margin: 0px;
+  }
+
+  .header, .footer {
+    padding: {
+      top: 20px;
+      right: 10px;
+      bottom: 10px;
+      left: 20px;
+    }
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 20x;
+
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-row-gap: 20px;
+  }
+
+  .main {
+    padding: 0px;
+    margin: {
+      top: 20px;
+      right: 10px;
+      bottom: 10px;
+      left: 20px;
+    };
+  }
+  
+  .sub-grid {
+    display: contents;
+    grid-template-columns: auto;
+    h3 {
+      grid-column: 1 / 2;
+    }
+  }
+}
+
+@media print {
+  .sheet {
+    width: auto;
+    margin: auto;
+    color: black;
+    background: {
+      color: white;
+    }
+  }
+}
